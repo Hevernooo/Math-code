@@ -1,0 +1,78 @@
+Python 3⬇️
+🇷🇺 Всем привет, этот код поможет ученикам 10 - 11 класса .
+Он позволяет найти:
+1. Упорядоченный список чисел
+2. Среднее арифметическое значение 
+3. Медиану
+4. Моду
+5. Дисперсию
+6. Среднее квадратичное отклонение
+Перед запуском нужно установить модуль statistics
+Код:
+import statistics
+xuy = []
+a = int(input("Сколько в общем чисел: "))
+for i in range(a):
+	c = float(input("Напиши число: "))
+	xuy.append(c)
+s = 0
+xuy.sort(reverse=False)
+print("Упорядоченный список: ", xuy)
+for i1 in range(a):
+	s += int(xuy[i1])
+s = s / a
+print("Среднее значение: ", s)
+m = 0
+if a % 2 == 0:
+	m = (xuy[a // 2] + xuy[a // 2 - 1]) / 2
+else:
+	m = xuy[a // 2]
+print("Медиана: ", m)
+print("Мода: ", statistics.mode(xuy))
+d = 0
+for i3 in range(a):
+	d += (xuy[i3] - s) ** 2
+disp = d / a
+print("Дисперсия: ", disp)
+otkl = disp**0.5
+print("Среднее квадратичное отклонение: ", otkl)
+
+
+
+🇺🇸 Hello everyone, this code will help students of grades 10 - 11. 
+It allows you to find: 
+1. Ordered list of numbers 
+2. Arithmetic mean 
+3. Median 
+4. Fashion 
+5. Variance 
+6. Standard deviation 
+Before starting, you need to install the statistics module
+Code:
+import statistics
+xuy = []
+a = int(input("How many numbers are there in total?: "))
+for i in range(a):
+	c = float(input("Write number: "))
+	xuy.append(c)
+s = 0
+xuy.sort(reverse=False)
+print("Ordered list of numbers: ", xuy)
+for i1 in range(a):
+	s += int(xuy[i1])
+s = s / a
+print("Arithmetic mean: ", s)
+m = 0
+if a % 2 == 0:
+	m = (xuy[a // 2] + xuy[a // 2 - 1]) / 2
+else:
+	m = xuy[a // 2]
+print("Median: ", m)
+print("Fashion: ", statistics.mode(xuy))
+d = 0
+for i3 in range(a):
+	d += (xuy[i3] - s) ** 2
+disp = d / a
+print("Variance: ", disp)
+otkl = disp**0.5
+print("Standart deviation: ", otkl)
